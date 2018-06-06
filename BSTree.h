@@ -2,7 +2,7 @@
 #include "BNode.h"
 #include <vector>
 
-class Tree : public Node {
+class Tree {
 public:
 	Tree();
 	~Tree();
@@ -19,13 +19,10 @@ public:
 	int MinNumber();
 	std::vector<int> AllLeaves();
 
-	void RotateLeft(int);
-	void RotateRight(int);
-
 	std::vector<int> ToVector();
 
 private:
-	Node * head;
+	Node *head;
 
 	Node *findNode(Node*, int);
 

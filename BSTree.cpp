@@ -171,12 +171,6 @@ std::vector<int> Tree::FindByFunc(bool(condition)(int, std::vector<int>), std::v
 	return arr;
 }
 
-void Tree::RotateLeft(int data) {
-	Node *nodeToRotate = findNode(head, data);
-
-	if (nodeToRotate == nullptr) return;
-	rotateLeft(nodeToRotate);
-}
 void Tree::rotateLeft(Node *node) {
 	if (node != nullptr) {
 		if (node->parent->right == node) {
@@ -196,12 +190,6 @@ void Tree::rotateLeft(Node *node) {
 	}
 }
 
-void Tree::RotateRight(int data) {
-	Node *nodeToRotate = findNode(head, data);
-
-	if (nodeToRotate == nullptr) return;
-	rotateRight(nodeToRotate);
-}
 void Tree::rotateRight(Node *node) {
 	if (node != nullptr) {
 		if (node->parent->right == node) {
